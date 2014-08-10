@@ -8,7 +8,9 @@ var main = {
 
 	secInterval: function() {
 		// Nuts
-		nuts.setNbrNuts(nuts.nbrNuts + nuts.nbrNutsPerSecond);
+		nuts.setNbrOwned(nuts.nbrOwned + nuts.nbrNutsPerSecond);
+
+
 	}
 
 }

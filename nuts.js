@@ -1,17 +1,17 @@
 var nuts = {
 
 	// Variables
-	nbrNuts: 0,
+	nbrOwned: 0,
 	nbrNutsPerSecond: 1,
 
 	// Functions
     onload: function() {
-        nuts.setNbrNuts(0); // We first have 0 nuts
+        nuts.setNbrOwned(0); // We first have 0 nuts
     },
 
-	setNbrNuts: function(value) {
-		this.nbrNuts = value;
-		htmlInteraction.setInnerHtml("nuts", "You have " + this.nbrNuts + " nuts!");
+	setNbrOwned: function(value) {
+		this.nbrOwned = value;
+		htmlInteraction.setInnerHtml("nuts", "You have " + this.nbrOwned + " nuts!");
 	}
 
 };
