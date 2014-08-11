@@ -10,7 +10,7 @@ var main = {
 		// Nuts
 		nuts.setNbrOwned(nuts.nbrOwned + nuts.nbrNutsPerSecond);
 
-
+		buttons.checkPeanutAvailable();
 	}
 
 }
