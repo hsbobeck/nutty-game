@@ -13,20 +13,25 @@
 
 		<!-- base "currencies" -->
 		<script type="text/javascript" src="nuts.js"></script>
+		<script type="text/javascript" src="peanuts.js"></script>
 
 		<!-- Game engine/"Update" Functions -->
 		<script type="text/javascript" src="main.js"></script>
+
+		<!-- Buttons -->
+		<script type="text/javascript" src="buttons.js"></script>
 
 		<!-- Design -->
 		<link rel="stylesheet" type="text/css" href="design.css" />
 	</head>
 
 	<!-- Let's get to the actual body now! -->
-
+<!-- MAKE A LOTTERY/BETTING SYSTEM! turn in a peanut for a chance to win nuts! -->
 	<body>
-		<span id="nuts"></span>
-		<span id="peanuts" style="visibility:hidden"></span>
-		<button id="buyPeanut" style="visibility:hidden" onClick="peanuts.buy1()">Buy a peanut (10 nuts)</button>
+		<span id="nuts"></span> <br/>
+		<span id="peanuts" style="visibility:hidden"></span> <br/>
+		<button id="buyPeanut" style="visibility:hidden" onClick="peanuts.buy1()">Trade for a peanut (10 nuts)</button>
+		<button id="buyPeanut10" style="visibility:hidden" onClick="peanuts.buy10()">Trade for 10 peanuts (100 nuts)</button>
 
 	</body>
 
