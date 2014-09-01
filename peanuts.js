@@ -7,7 +7,6 @@ var peanuts = {
 	// Functions
 	setNbrOwned: function(value) {
 		this.nbrOwned = value;
-		buttons.checkPeanutAvailable();
 		if(this.nbrOwned != 1) {
 			htmlInteraction.setInnerHtml("peanuts", "You have " + this.nbrOwned + " peanuts!");
 		} else {
