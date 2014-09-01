@@ -2,7 +2,7 @@ var lottery = {
 
 	// Variables
 	nbrOwned: 0,
-	priceForOne: 100,
+	priceForOne: 10,
 
 	// Functions
 	setNbrOwned: function(value) {
