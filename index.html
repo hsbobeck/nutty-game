@@ -11,8 +11,8 @@
 		<!-- JavaScript Additions -->
 		<script type="text/javascript" src="htmlInteraction.js"></script>
 
-		<!-- Lottery -->
-		<script type="text/javascript" src="lottery.js"></script>
+		<!-- Tickets -->
+		<script type="text/javascript" src="tickets.js"></script>
 
 		<!-- base "currencies" -->
 		<script type="text/javascript" src="nuts.js"></script>
@@ -42,9 +42,11 @@
 		<br/>
 		<br/>
 
-		<div id="lottery">
-			<span id="tickets" style="visibility:hidden"> </span> <br/>
-			<button id="buyTicket" onClick="lottery.buyTicket()" style="visibility:hidden">Buy a scratch ticket (10 peanuts)</button>
+		<div id="tickets">
+			<span id="ticketsCommon" style="visibility:hidden"> </span> <button id="scratchCommon" style="visibility:hidden" onClick="tickets.scratchCommon()">Scratch</button> <span id="commonCongrats" style="visibility:hidden"> </span>  <br/>
+			<span id="ticketsShiny" style="visibility:hidden"> </span> <button id="scratchShiny" style="visibility:hidden" onClick="tickets.scratchShiny()">Scratch</button> <span id="shinyCongrats" style="visibility:hidden"> </span> <br/>
+			<span id="ticketsGolden" style="visibility:hidden"> </span> <button id="scratchGolden" style="visibility:hidden" onClick="tickets.scratchGolden()">Scratch</button> <span id="goldenCongrats" style="visibility:hidden"> </span>  <br/>
+			<button id="buyTicket" onClick="tickets.buyTicket()" style="visibility:hidden">Buy a scratch ticket (10 peanuts)</button>
 		</div>
 
 	</body>
