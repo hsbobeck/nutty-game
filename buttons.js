@@ -16,4 +16,13 @@ var buttons = {
 		}
 	},
 
+	checkLotteryAvailable: function() {
+		if(peanuts.nbrOwned >= lottery.priceForOne) {
+			htmlInteraction.showButton("buyTicket");
+			htmlInteraction.enableButton("buyTicket");
+		} else {
+			htmlInteraction.disableButton("buyTicket");
+		}
+	},
+
 };

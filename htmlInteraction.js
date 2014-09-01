@@ -14,7 +14,7 @@ var htmlInteraction = {
 	},
 
 	showButton: function(id) {
-		this.setElementVisibility(id, true)
+		this.setElementVisibility(id, true);
 	},
 
 	enableButton: function(id) {
