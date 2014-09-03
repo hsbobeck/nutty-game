@@ -20,3 +20,7 @@ function shuffle(array) {
 
   return array;
 };
+
+function getRandomFromRange(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}

@@ -41,14 +41,14 @@ var tickets = {
 	},
 
 	buyTicket: function() {
-		htmlInteraction.setElementVisibility("commonCongrats", true)
+		htmlInteraction.setElementVisibility("commonCongrats", false)
 		htmlInteraction.setElementVisibility("shinyCongrats", false)
 		htmlInteraction.setElementVisibility("goldenCongrats", false)
-		
+
 		if(peanuts.nbrOwned >= this.priceForOne) {
 			random = Math.random();
 			peanuts.setNbrOwned(peanuts.nbrOwned - this.priceForOne);
-			if(random < 0.76) {
+			if(random < 0.81) {
 				this.setNbrOwnedCommon(this.nbrOwnedCommon + 1);
 				htmlInteraction.setElementVisibility("ticketsCommon", true);
 			} else if(random < 0.96) {
@@ -67,9 +67,9 @@ var tickets = {
 		htmlInteraction.setElementVisibility("shinyCongrats", false)
 		htmlInteraction.setElementVisibility("goldenCongrats", false)
 
-		commonOutcomes = ['2peanuts', '1peanut', '25nuts', '10nuts'];
-		uncommonOutcomes = ['5peanuts', '8peanuts', '65nuts', '80nuts'];
-		rareOutcomes = ['10peanuts', '15peanuts', '100nuts', '165nuts'];
+		commonOutcomes = ['peanuts', 'nuts'];
+		uncommonOutcomes = ['peanuts', 'nuts'];
+		rareOutcomes = ['peanuts', 'nuts'];
 
 		shuffle(commonOutcomes);
 		shuffle(uncommonOutcomes);
@@ -81,21 +81,15 @@ var tickets = {
 		if(random < 0.76) {
 			// these are common for this ticket
 			switch(commonOutcomes[0]) {
-				case '2peanuts':
-					peanuts.setNbrOwned(peanuts.nbrOwned + 2)
-					htmlInteraction.setInnerHtml("commonCongrats", "Congratulations! You won 2 peanuts.")
+				case 'peanuts':
+					randPeanuts = getRandomFromRange(1, 5);
+					peanuts.setNbrOwned(peanuts.nbrOwned + randPeanuts);
+					htmlInteraction.setInnerHtml("commonCongrats", "You didn't profit, but at least you won " + randPeanuts + " peanuts.")
 					break;
-				case '1peanut':
-					peanuts.setNbrOwned(peanuts.nbrOwned + 1)
-					htmlInteraction.setInnerHtml("commonCongrats", "Congratulations! You won a peanut.")
-					break;
-				case '25nuts':
-					nuts.setNbrOwned(nuts.nbrOwned + 25)
-					htmlInteraction.setInnerHtml("commonCongrats", "Congratulations! You won 25 nuts.")
-					break;
-				case '10nuts':
-					nuts.setNbrOwned(nuts.nbrOwned + 10)
-					htmlInteraction.setInnerHtml("commonCongrats", "Congratulations! You won 10 nuts.")
+				case 'nuts':
+					randNuts = getRandomFromRange(10, 51);
+					nuts.setNbrOwned(nuts.nbrOwned + randNuts);
+					htmlInteraction.setInnerHtml("commonCongrats", "You didn't profit, but at least you won " + randNuts + " nuts.")
 					break;
 				default:
 					console.log(defaultWarning)
@@ -104,21 +98,15 @@ var tickets = {
 		} else if(random < 0.96) {
 			// these are uncommon for this ticket
 			switch(uncommonOutcomes[0]) {
-				case '5peanuts':
-					peanuts.setNbrOwned(peanuts.nbrOwned + 5)
-					htmlInteraction.setInnerHtml("commonCongrats", "Congratulations! You won 5 peanuts.")
+				case 'peanuts':
+					randPeanuts = getRandomFromRange(6, 10);
+					peanuts.setNbrOwned(peanuts.nbrOwned + randPeanuts);
+					htmlInteraction.setInnerHtml("commonCongrats", "You didn't profit, but at least you won " + randPeanuts + " peanuts.")
 					break;
-				case '8peanuts':
-					peanuts.setNbrOwned(peanuts.nbrOwned + 8)
-					htmlInteraction.setInnerHtml("commonCongrats", "Congratulations! You won 8 peanuts.")
-					break;
-				case '65nuts':
-					nuts.setNbrOwned(nuts.nbrOwned + 65)
-					htmlInteraction.setInnerHtml("commonCongrats", "Congratulations! You won 65 nuts.")
-					break;
-				case '80nuts':
-					nuts.setNbrOwned(nuts.nbrOwned + 80)
-					htmlInteraction.setInnerHtml("commonCongrats", "Congratulations! You won 80 nuts.")
+				case 'nuts':
+					randNuts = getRandomFromRange(52, 100);
+					nuts.setNbrOwned(nuts.nbrOwned + randNuts);
+					htmlInteraction.setInnerHtml("commonCongrats", "You didn't profit, but at least you won " + randNuts + " nuts.")
 					break;
 				default:
 					console.log(defaultWarning)
@@ -127,21 +115,15 @@ var tickets = {
 		} else {
 			// these are rare for this ticket
 			switch(rareOutcomes[0]) {
-				case '10peanuts':
-					peanuts.setNbrOwned(peanuts.nbrOwned + 10)
-					htmlInteraction.setInnerHtml("commonCongrats", "Congratulations! You won 10 peanuts.")
+				case 'peanuts':
+					randPeanuts = getRandomFromRange(11, 21);
+					peanuts.setNbrOwned(peanuts.nbrOwned + randPeanuts);
+					htmlInteraction.setInnerHtml("commonCongrats", "Congratulations! You profited and won " + randPeanuts + " peanuts.")
 					break;
-				case '15peanuts':
-					peanuts.setNbrOwned(peanuts.nbrOwned + 15)
-					htmlInteraction.setInnerHtml("commonCongrats", "Congratulations! You won 15 peanuts.")
-					break;
-				case '100nuts':
-					nuts.setNbrOwned(nuts.nbrOwned + 100)
-					htmlInteraction.setInnerHtml("commonCongrats", "Congratulations! You won 100 nuts.")
-					break;
-				case '165nuts':
-					nuts.setNbrOwned(nuts.nbrOwned + 165)
-					htmlInteraction.setInnerHtml("commonCongrats", "Congratulations! You won 165 nuts.")
+				case 'nuts':
+					randNuts = getRandomFromRange(101, 201);
+					nuts.setNbrOwned(nuts.nbrOwned + randNuts);
+					htmlInteraction.setInnerHtml("commonCongrats", "Congratulations! You profited and won " + randNuts + " nuts.")
 					break;
 				default:
 					console.log(defaultWarning)
