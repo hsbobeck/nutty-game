@@ -41,6 +41,10 @@ var tickets = {
 	},
 
 	buyTicket: function() {
+		htmlInteraction.setElementVisibility("commonCongrats", true)
+		htmlInteraction.setElementVisibility("shinyCongrats", false)
+		htmlInteraction.setElementVisibility("goldenCongrats", false)
+		
 		if(peanuts.nbrOwned >= this.priceForOne) {
 			random = Math.random();
 			peanuts.setNbrOwned(peanuts.nbrOwned - this.priceForOne);
