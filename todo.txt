@@ -1,0 +1,19 @@
+	~ NOT STARTED ~
+
+- traveling to different areas (randomized with seventh sanctum names?)
+- on page refresh, or on game start, first choose which kind of victory you want to achieve (certain number of nuts/peanuts? Defeat storyline? Get 'x' number of uniques?)
+
+
+
+	~ IN PROGRESS ~
+
+- Scratch ticket reward system (make more interesting)
+- Uniques (Name of unique rewarded is randomized. ex: "Pistachio of Disbelief" or "Walnut from Heaven")
+
+
+
+	~ COMPLETED ~
+
+- Scratch tickets - common, shiny, golden buyable with some kind of rewards
+- Peanuts can be bought with nuts
+- Nuts increment by 1 per second
