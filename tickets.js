@@ -6,7 +6,6 @@ var tickets = {
 	nbrOwnedGolden: 0,
 	priceForOne: 10,
 
-
 	// Functions
 	setNbrOwnedCommon: function(value) {
 		this.nbrOwnedCommon = value;
